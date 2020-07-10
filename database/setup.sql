@@ -19,8 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `login_course`
 --
-CREATE DATABASE IF NOT EXISTS `login_course` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE `login_course`;
+CREATE DATABASE IF NOT EXISTS `login_system` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE `login_system`;
 
 -- --------------------------------------------------------
 
@@ -31,7 +31,7 @@ USE `login_course`;
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `user_id` int(5) UNSIGNED NOT NULL COMMENT 'User Id',
-  `email` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Users email address',
+  `email` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NOT NULL COMMENT 'Users email address',
   `password` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'User password',
   `reg_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'The time and date the user registered'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Users table';
